@@ -9,7 +9,7 @@ exports.data = env.XDG_DATA_HOME ||
 exports.config = env.XDG_CONFIG_HOME ||
 	(userHome ? path.join(userHome, '.config') : null);
 
-exports.cache = env.XDG_CONFIG_HOME || (userHome ? path.join(userHome, '.cache') : null);
+exports.cache = env.XDG_CACHE_HOME || (userHome ? path.join(userHome, '.cache') : null);
 
 exports.runtime = env.XDG_RUNTIME_DIR || null;
 
