@@ -7,7 +7,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -27,10 +27,13 @@
     "path",
     "data",
     "config",
-    "cache"
+    "cache",
+    "linux",
+    "unix",
+    "spec"
   ],
   "dependencies": {
-    "user-home": "^1.0.0"
+    "os-homedir": "^1.0.0"
   },
   "devDependencies": {
     "ava": "0.0.4",
