@@ -13,7 +13,7 @@ $ npm install --save xdg-basedir
 ## Usage
 
 ```js
-var xdgBasedir = require('xdg-basedir');
+const xdgBasedir = require('xdg-basedir');
 
 xdgBasedir.data;
 //=> '/home/sindresorhus/.local/share'
@@ -57,4 +57,4 @@ Preference-ordered array of base directories to search for configuration files i
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

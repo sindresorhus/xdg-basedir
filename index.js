@@ -1,6 +1,7 @@
 'use strict';
 var path = require('path');
 var osHomedir = require('os-homedir');
+
 var home = osHomedir();
 var env = process.env;
 
