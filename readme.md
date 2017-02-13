@@ -1,6 +1,6 @@
 # xdg-basedir [![Build Status](https://travis-ci.org/sindresorhus/xdg-basedir.svg?branch=master)](https://travis-ci.org/sindresorhus/xdg-basedir)
 
-> Get [XDG Base Directory](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html) paths
+> Get [XDG Base Directory](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) paths
 
 
 ## Install
