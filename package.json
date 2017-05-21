@@ -34,7 +34,7 @@
   ],
   "devDependencies": {
     "ava": "*",
-    "require-uncached": "^1.0.2",
+    "import-fresh": "^2.0.0",
     "xo": "*"
   }
 }
