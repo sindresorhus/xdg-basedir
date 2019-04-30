@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save xdg-basedir
+$ npm install xdg-basedir
 ```
 
 
