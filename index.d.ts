@@ -1,6 +1,6 @@
 declare const xdgBasedir: {
 	/**
-	Directory for user specific data files.
+	Directory for user-specific data files.
 
 	@example
 	```js
@@ -13,7 +13,7 @@ declare const xdgBasedir: {
 	readonly data?: string;
 
 	/**
-	Directory for user specific configuration files.
+	Directory for user-specific configuration files.
 
 	@example
 	```js
@@ -26,7 +26,7 @@ declare const xdgBasedir: {
 	readonly config?: string;
 
 	/**
-	Directory for user specific non-essential data files.
+	Directory for user-specific non-essential data files.
 
 	@example
 	```js
