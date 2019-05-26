@@ -15,13 +15,13 @@ exports.cache = env.XDG_CACHE_HOME || (homeDirectory ? path.join(homeDirectory, 
 
 exports.runtime = env.XDG_RUNTIME_DIR || undefined;
 
-exports.dataDirs = (env.XDG_DATA_DIRS || '/usr/local/share/:/usr/share/').split(':');
+exports.dataDirs = (env.XDG_DATA_DIRS || '/usr/local/share/:/usr/share/').split(path.delimiter);
 
 if (exports.data) {
 	exports.dataDirs.unshift(exports.data);
 }
 
-exports.configDirs = (env.XDG_CONFIG_DIRS || '/etc/xdg').split(':');
+exports.configDirs = (env.XDG_CONFIG_DIRS || '/etc/xdg').split(path.delimiter);
 
 if (exports.config) {
 	exports.configDirs.unshift(exports.config);

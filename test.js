@@ -1,3 +1,4 @@
+import path from 'path';
 import {serial as test} from 'ava';
 import importFresh from 'import-fresh';
 
@@ -26,7 +27,7 @@ test('.runtime', t => {
 });
 
 test('.dataDirs', t => {
-	process.env.XDG_DATA_DIRS = 'dirs:data_dirs';
+	process.env.XDG_DATA_DIRS = ['dirs', 'data_dirs'].join(path.delimiter);
 	const xdgBasedir = importFresh('.');
 	t.is(xdgBasedir.dataDirs[0], 'data');
 	t.is(xdgBasedir.dataDirs[1], 'dirs');
@@ -34,7 +35,7 @@ test('.dataDirs', t => {
 });
 
 test('.configDirs', t => {
-	process.env.XDG_CONFIG_DIRS = 'dirs:config_dirs';
+	process.env.XDG_CONFIG_DIRS = ['dirs', 'config_dirs'].join(path.delimiter);
 	const xdgBasedir = importFresh('.');
 	t.is(xdgBasedir.configDirs[0], 'config');
 	t.is(xdgBasedir.configDirs[1], 'dirs');
