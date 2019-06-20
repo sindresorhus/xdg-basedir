@@ -2,6 +2,8 @@
 
 > Get [XDG Base Directory](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) paths
 
+This package is meant for Linux. You should not use XDG on macOS and Windows. Instead, you should follow their platform conventions. You can use [`env-paths`](https://github.com/sindresorhus/env-paths) for that.
+
 
 ## Install
 
