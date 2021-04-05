@@ -4,24 +4,24 @@ import path from 'path';
 const homeDirectory = os.homedir();
 const {env} = process;
 
-export const data = env.XDG_DATA_HOME ||
+export const xdgData = env.XDG_DATA_HOME ||
 	(homeDirectory ? path.join(homeDirectory, '.local', 'share') : undefined);
 
-export const config = env.XDG_CONFIG_HOME ||
+export const xdgConfig = env.XDG_CONFIG_HOME ||
 	(homeDirectory ? path.join(homeDirectory, '.config') : undefined);
 
-export const cache = env.XDG_CACHE_HOME || (homeDirectory ? path.join(homeDirectory, '.cache') : undefined);
+export const xdgCache = env.XDG_CACHE_HOME || (homeDirectory ? path.join(homeDirectory, '.cache') : undefined);
 
-export const runtime = env.XDG_RUNTIME_DIR || undefined;
+export const xdgRuntime = env.XDG_RUNTIME_DIR || undefined;
 
-export const dataDirs = (env.XDG_DATA_DIRS || '/usr/local/share/:/usr/share/').split(':');
+export const xdgDataDirectories = (env.XDG_DATA_DIRS || '/usr/local/share/:/usr/share/').split(':');
 
-if (data) {
-	dataDirs.unshift(data);
+if (xdgData) {
+	xdgDataDirectories.unshift(xdgData);
 }
 
-export const configDirs = (env.XDG_CONFIG_DIRS || '/etc/xdg').split(':');
+export const xdgConfigDirectories = (env.XDG_CONFIG_DIRS || '/etc/xdg').split(':');
 
-if (config) {
-	configDirs.unshift(config);
+if (xdgConfig) {
+	xdgConfigDirectories.unshift(xdgConfig);
 }
