@@ -1,81 +1,77 @@
-declare const xdgBasedir: {
-	/**
-	Directory for user-specific data files.
+/**
+Directory for user-specific data files.
 
-	@example
-	```js
-	import xdgBasedir = require('xdg-basedir');
+@example
+```
+import {xdgData} from 'xdg-basedir';
 
-	xdgBasedir.data;
-	//=> '/home/sindresorhus/.local/share'
-	```
-	*/
-	readonly data?: string;
+console.log(xdgData);
+//=> '/home/sindresorhus/.local/share'
+```
+*/
+export const xdgData: string | undefined;
 
-	/**
-	Directory for user-specific configuration files.
+/**
+Directory for user-specific configuration files.
 
-	@example
-	```js
-	import xdgBasedir = require('xdg-basedir');
+@example
+```
+import {xdgConfig} from 'xdg-basedir';
 
-	xdgBasedir.config;
-	//=> '/home/sindresorhus/.config'
-	```
-	*/
-	readonly config?: string;
+console.log(xdgConfig);
+//=> '/home/sindresorhus/.config'
+```
+*/
+export const xdgConfig: string | undefined;
 
-	/**
-	Directory for user-specific non-essential data files.
+/**
+Directory for user-specific non-essential data files.
 
-	@example
-	```js
-	import xdgBasedir = require('xdg-basedir');
+@example
+```
+import {xdgCache} from 'xdg-basedir';
 
-	xdgBasedir.cache;
-	//=> '/home/sindresorhus/.cache'
-	```
-	*/
-	readonly cache?: string;
+console.log(xdgCache);
+//=> '/home/sindresorhus/.cache'
+```
+*/
+export const xdgCache: string | undefined;
 
-	/**
-	Directory for user-specific non-essential runtime files and other file objects (such as sockets, named pipes, etc).
+/**
+Directory for user-specific non-essential runtime files and other file objects (such as sockets, named pipes, etc).
 
-	@example
-	```js
-	import xdgBasedir = require('xdg-basedir');
+@example
+```
+import {xdgRuntime} from 'xdg-basedir';
 
-	xdgBasedir.runtime;
-	//=> '/run/user/sindresorhus'
-	```
-	*/
-	readonly runtime?: string;
+console.log(xdgRuntime);
+//=> '/run/user/sindresorhus'
+```
+*/
+export const xdgRuntime: string | undefined;
 
-	/**
-	Preference-ordered array of base directories to search for data files in addition to `.data`.
+/**
+Preference-ordered array of base directories to search for data files in addition to `xdgData`.
 
-	@example
-	```js
-	import xdgBasedir = require('xdg-basedir');
+@example
+```
+import {xdgDataDirectories} from 'xdg-basedir';
 
-	xdgBasedir.dataDirs
-	//=> ['/home/sindresorhus/.local/share', '/usr/local/share/', '/usr/share/']
-	```
-	*/
-	readonly dataDirs: readonly string[];
+console.log(xdgDataDirectories);
+//=> ['/home/sindresorhus/.local/share', '/usr/local/share/', '/usr/share/']
+```
+*/
+export const xdgDataDirectories: readonly string[];
 
-	/**
-	Preference-ordered array of base directories to search for configuration files in addition to `.config`.
+/**
+Preference-ordered array of base directories to search for configuration files in addition to `xdgConfig`.
 
-	@example
-	```js
-	import xdgBasedir = require('xdg-basedir');
+@example
+```
+import {xdgConfigDirectories} from 'xdg-basedir';
 
-	xdgBasedir.configDirs;
-	//=> ['/home/sindresorhus/.config', '/etc/xdg']
-	```
-	*/
-	readonly configDirs: readonly string[];
-};
-
-export = xdgBasedir;
+console.log(xdgConfigDirectories);
+//=> ['/home/sindresorhus/.config', '/etc/xdg']
+```
+*/
+export const xdgConfigDirectories: readonly string[];

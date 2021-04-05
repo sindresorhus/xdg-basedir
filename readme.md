@@ -2,8 +2,7 @@
 
 > Get [XDG Base Directory](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) paths
 
-This package is meant for Linux. You should not use XDG on macOS and Windows. Instead, you should follow their platform conventions. You can use [`env-paths`](https://github.com/sindresorhus/env-paths) for that.
-
+This package is meant for Linux. You should not use XDG on macOS or Windows. Instead, you should follow their platform conventions. You can use [`env-paths`](https://github.com/sindresorhus/env-paths) for that.
 
 ## Install
 
@@ -11,51 +10,48 @@ This package is meant for Linux. You should not use XDG on macOS and Windows. In
 $ npm install xdg-basedir
 ```
 
-
 ## Usage
 
 ```js
-const xdgBasedir = require('xdg-basedir');
+import {xdgData, xdgConfig, xdgDataDirectories} from 'xdg-basedir';
 
-xdgBasedir.data;
+console.log(xdgData);
 //=> '/home/sindresorhus/.local/share'
 
-xdgBasedir.config;
+console.log(xdgConfig);
 //=> '/home/sindresorhus/.config'
 
-xdgBasedir.dataDirs
+console.log(xdgDataDirectories);
 //=> ['/home/sindresorhus/.local/share', '/usr/local/share/', '/usr/share/']
 ```
 
-
 ## API
 
-The properties `.data`, `.config`, `.cache`, `.runtime` will return `null` in the uncommon case that both the XDG environment variable is not set and the users home directory can't be found. You need to handle this case. A common solution is to [fall back to a temp directory](https://github.com/yeoman/configstore/blob/b82690fc401318ad18dcd7d151a0003a4898a314/index.js#L15).
+The exports `xdgData`, `xdgConfig`, `xdgCache`, `xdgRuntime` will return `undefined` in the uncommon case that both the XDG environment variable is not set and the users home directory can't be found. You need to handle this case. A common solution is to [fall back to a temporary directory](https://github.com/yeoman/configstore/blob/b82690fc401318ad18dcd7d151a0003a4898a314/index.js#L15).
 
-### .data
+### xdgData
 
 Directory for user-specific data files.
 
-### .config
+### xdgConfig
 
 Directory for user-specific configuration files.
 
-### .cache
+### xdgCache
 
 Directory for user-specific non-essential data files.
 
-### .runtime
+### xdgRuntime
 
 Directory for user-specific non-essential runtime files and other file objects (such as sockets, named pipes, etc).
 
-### .dataDirs
+### xdgDataDirectories
 
-Preference-ordered array of base directories to search for data files in addition to `.data`.
+Preference-ordered array of base directories to search for data files in addition to `xdgData`.
 
-### .configDirs
+### xdgConfigDirectories
 
-Preference-ordered array of base directories to search for configuration files in addition to `.config`.
-
+Preference-ordered array of base directories to search for configuration files in addition to `xdgConfig`.
 
 ---
 

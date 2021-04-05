@@ -1,15 +1,15 @@
 import {expectType, expectError} from 'tsd';
-import xdgBasedir = require('.');
+import {xdgData, xdgConfig, xdgCache, xdgRuntime, xdgConfigDirectories, xdgDataDirectories} from './index.js';
 
-expectType<string | undefined>(xdgBasedir.data);
-expectError<string>(xdgBasedir.data);
-expectType<string | undefined>(xdgBasedir.config);
-expectError<string>(xdgBasedir.config);
-expectType<string | undefined>(xdgBasedir.cache);
-expectError<string>(xdgBasedir.cache);
-expectType<string | undefined>(xdgBasedir.runtime);
-expectError<string>(xdgBasedir.runtime);
-expectType<readonly string[]>(xdgBasedir.configDirs);
-expectError<string[]>(xdgBasedir.configDirs);
-expectType<readonly string[]>(xdgBasedir.dataDirs);
-expectError<string[]>(xdgBasedir.dataDirs);
+expectType<string | undefined>(xdgData);
+expectError<string>(xdgData);
+expectType<string | undefined>(xdgCache);
+expectError<string>(xdgCache);
+expectType<string | undefined>(xdgCache);
+expectError<string>(xdgCache);
+expectType<string | undefined>(xdgRuntime);
+expectError<string>(xdgRuntime);
+expectType<readonly string[]>(xdgConfigDirectories);
+expectError<string[]>(xdgConfigDirectories);
+expectType<readonly string[]>(xdgDataDirectories);
+expectError<string[]>(xdgDataDirectories);
