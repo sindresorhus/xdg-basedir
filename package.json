@@ -1,6 +1,6 @@
 {
 	"name": "xdg-basedir",
-	"version": "4.0.0",
+	"version": "5.0.0",
 	"description": "Get XDG Base Directory paths",
 	"license": "MIT",
 	"repository": "sindresorhus/xdg-basedir",
