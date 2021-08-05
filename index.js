@@ -10,6 +10,9 @@ export const xdgData = env.XDG_DATA_HOME ||
 export const xdgConfig = env.XDG_CONFIG_HOME ||
 	(homeDirectory ? path.join(homeDirectory, '.config') : undefined);
 
+export const xdgState = env.XDG_STATE_HOME ||
+	(homeDirectory ? path.join(homeDirectory, '.local', 'state') : undefined);
+
 export const xdgCache = env.XDG_CACHE_HOME || (homeDirectory ? path.join(homeDirectory, '.cache') : undefined);
 
 export const xdgRuntime = env.XDG_RUNTIME_DIR || undefined;

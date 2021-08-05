@@ -19,6 +19,12 @@ test('x', t => {
 // 	t.is(xdgConfig, 'config');
 // });
 //
+// test('xdgState', t => {
+// 	process.env.XDG_CONFIG_HOME = 'state';
+// 	const {xdgState} = importFresh('.');
+// 	t.is(xdgState, 'state');
+// });
+//
 // test('xdgCache', t => {
 // 	process.env.XDG_CACHE_HOME = 'cache';
 // 	const {xdgCache} = importFresh('.');
