@@ -37,6 +37,10 @@ Directory for user-specific data files.
 
 Directory for user-specific configuration files.
 
+### xdgState
+
+Directory for user-specific state files.
+
 ### xdgCache
 
 Directory for user-specific non-essential data files.

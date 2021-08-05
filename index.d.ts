@@ -25,7 +25,7 @@ console.log(xdgConfig);
 export const xdgConfig: string | undefined;
 
 /**
-Directory for user-specific configuration files.
+Directory for user-specific state files.
 
 @example
 ```
