@@ -3,8 +3,8 @@ import {xdgData, xdgConfig, xdgCache, xdgRuntime, xdgConfigDirectories, xdgDataD
 
 expectType<string | undefined>(xdgData);
 expectError<string>(xdgData);
-expectType<string | undefined>(xdgCache);
-expectError<string>(xdgCache);
+expectType<string | undefined>(xdgConfig);
+expectError<string>(xdgConfig);
 expectType<string | undefined>(xdgCache);
 expectError<string>(xdgCache);
 expectType<string | undefined>(xdgRuntime);
