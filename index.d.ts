@@ -25,6 +25,19 @@ console.log(xdgConfig);
 export const xdgConfig: string | undefined;
 
 /**
+Directory for user-specific configuration files.
+
+@example
+```
+import {xdgState} from 'xdg-basedir';
+
+console.log(xdgState);
+//=> '/home/sindresorhus/.local/state'
+```
+*/
+export const xdgState: string | undefined;
+
+/**
 Directory for user-specific non-essential data files.
 
 @example
